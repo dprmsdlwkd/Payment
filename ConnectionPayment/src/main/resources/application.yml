@@ -1,0 +1,25 @@
+server:
+  address: localhost
+  port: 8080
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        map-underscore-to-camel-case: true
+    
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/payment_history?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
